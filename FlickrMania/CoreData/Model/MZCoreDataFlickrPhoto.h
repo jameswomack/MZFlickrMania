@@ -20,8 +20,6 @@
 @property (nonatomic, retain) NSString * ownerName;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * uploadDate;
-@property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSString * permalink;
 @property (nonatomic, retain) NSSet *comments;
 @property (nonatomic, retain) NSSet *dimensions;
 @end

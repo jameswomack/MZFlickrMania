@@ -17,6 +17,8 @@
 @dynamic iconServer;
 @dynamic authorName;
 @dynamic authorID;
+@dynamic permalink;
+@dynamic content;
 @dynamic authorRealName;
 @dynamic createdDate;
 @dynamic photo;

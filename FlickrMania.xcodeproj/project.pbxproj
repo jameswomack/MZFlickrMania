@@ -14,13 +14,32 @@
 		0618DBB2182C4998002C487B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBB1182C4998002C487B /* main.m */; };
 		0618DBB6182C4998002C487B /* MZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBB5182C4998002C487B /* MZAppDelegate.m */; };
 		0618DBB9182C4998002C487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0618DBB7182C4998002C487B /* Main.storyboard */; };
-		0618DBBC182C4998002C487B /* MZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBBB182C4998002C487B /* MZViewController.m */; };
-		0618DBBE182C4998002C487B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0618DBBD182C4998002C487B /* Images.xcassets */; };
+		0618DBBC182C4998002C487B /* MZRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBBB182C4998002C487B /* MZRecentViewController.m */; };
 		0618DBC5182C4998002C487B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0618DBC4182C4998002C487B /* XCTest.framework */; };
 		0618DBC6182C4998002C487B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0618DBA5182C4998002C487B /* Foundation.framework */; };
 		0618DBC7182C4998002C487B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0618DBA9182C4998002C487B /* UIKit.framework */; };
 		0618DBCF182C4998002C487B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0618DBCD182C4998002C487B /* InfoPlist.strings */; };
 		0618DBD1182C4998002C487B /* FlickrManiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBD0182C4998002C487B /* FlickrManiaTests.m */; };
+		0618DBDD182C4D00002C487B /* Flickrmania.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0618DBDB182C4D00002C487B /* Flickrmania.xcdatamodeld */; };
+		0631B027184A26BA00668FB8 /* MZCoreDataFlickrComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B026184A26BA00668FB8 /* MZCoreDataFlickrComment.m */; };
+		0631B02A184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B029184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m */; };
+		0631B02D184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B02C184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m */; };
+		0631B031184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B030184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.m */; };
+		0631B034184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B033184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m */; };
+		0631B037184A280200668FB8 /* MZCoreDataFlickrComment+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B036184A280200668FB8 /* MZCoreDataFlickrComment+Additional.m */; };
+		0631B03A184A3C6700668FB8 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631B039184A3C6700668FB8 /* UIColor+Random.m */; };
+		064BB766182FE9FC00D7EBD9 /* MZFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB765182FE9FC00D7EBD9 /* MZFlickrPhoto.m */; };
+		064BB76A182FF0E100D7EBD9 /* MZLibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB769182FF0E100D7EBD9 /* MZLibraryAPI.m */; };
+		064BB76E183007D000D7EBD9 /* MZFlickrPhotoDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB76D183007D000D7EBD9 /* MZFlickrPhotoDimension.m */; };
+		064BB77118300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB77018300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m */; };
+		064BB775183013D900D7EBD9 /* MZRecentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB774183013D900D7EBD9 /* MZRecentCell.m */; };
+		06709F8D1830332D001E2DAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06709F8C1830332D001E2DAC /* Images.xcassets */; };
+		06709F9218303C9A001E2DAC /* MZRecentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06709F9118303C9A001E2DAC /* MZRecentDetailsViewController.m */; };
+		06ABD76818469BE700A33C1E /* MZRecentPhotoCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABD76718469BE700A33C1E /* MZRecentPhotoCommentCell.m */; };
+		06B60382185105CA007FFAD3 /* MZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B60381185105CA007FFAD3 /* MZTabBarController.m */; };
+		06B60388185106F4007FFAD3 /* MZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B60387185106F4007FFAD3 /* MZConstants.m */; };
+		06BE7FE41831085600449D57 /* MZFlickrComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE7FE31831085600449D57 /* MZFlickrComment.m */; };
+		DD66C5F3068E4FB49F2BF7FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE594F9C6CE54FB9ADDBD407 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +64,51 @@
 		0618DBB4182C4998002C487B /* MZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAppDelegate.h; sourceTree = "<group>"; };
 		0618DBB5182C4998002C487B /* MZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAppDelegate.m; sourceTree = "<group>"; };
 		0618DBB8182C4998002C487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0618DBBA182C4998002C487B /* MZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZViewController.h; sourceTree = "<group>"; };
-		0618DBBB182C4998002C487B /* MZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZViewController.m; sourceTree = "<group>"; };
-		0618DBBD182C4998002C487B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0618DBBA182C4998002C487B /* MZRecentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZRecentViewController.h; sourceTree = "<group>"; };
+		0618DBBB182C4998002C487B /* MZRecentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZRecentViewController.m; sourceTree = "<group>"; };
 		0618DBC3182C4998002C487B /* FlickrManiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrManiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0618DBC4182C4998002C487B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0618DBCC182C4998002C487B /* FlickrManiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickrManiaTests-Info.plist"; sourceTree = "<group>"; };
 		0618DBCE182C4998002C487B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0618DBD0182C4998002C487B /* FlickrManiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrManiaTests.m; sourceTree = "<group>"; };
+		0618DBDC182C4D00002C487B /* Flickrmania.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flickrmania.xcdatamodel; sourceTree = "<group>"; };
+		0631B025184A26BA00668FB8 /* MZCoreDataFlickrComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZCoreDataFlickrComment.h; path = CoreData/Model/MZCoreDataFlickrComment.h; sourceTree = "<group>"; };
+		0631B026184A26BA00668FB8 /* MZCoreDataFlickrComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZCoreDataFlickrComment.m; path = CoreData/Model/MZCoreDataFlickrComment.m; sourceTree = "<group>"; };
+		0631B028184A26BA00668FB8 /* MZCoreDataFlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZCoreDataFlickrPhoto.h; path = CoreData/Model/MZCoreDataFlickrPhoto.h; sourceTree = "<group>"; };
+		0631B029184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZCoreDataFlickrPhoto.m; path = CoreData/Model/MZCoreDataFlickrPhoto.m; sourceTree = "<group>"; };
+		0631B02B184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZCoreDataFlickrPhotoDimension.h; path = CoreData/Model/MZCoreDataFlickrPhotoDimension.h; sourceTree = "<group>"; };
+		0631B02C184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZCoreDataFlickrPhotoDimension.m; path = CoreData/Model/MZCoreDataFlickrPhotoDimension.m; sourceTree = "<group>"; };
+		0631B02F184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MZCoreDataFlickrPhotoDimension+Additional.h"; path = "Model/Categories/MZCoreDataFlickrPhotoDimension+Additional.h"; sourceTree = "<group>"; };
+		0631B030184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MZCoreDataFlickrPhotoDimension+Additional.m"; path = "Model/Categories/MZCoreDataFlickrPhotoDimension+Additional.m"; sourceTree = "<group>"; };
+		0631B032184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MZCoreDataFlickrPhoto+Additional.h"; path = "Model/Categories/MZCoreDataFlickrPhoto+Additional.h"; sourceTree = "<group>"; };
+		0631B033184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MZCoreDataFlickrPhoto+Additional.m"; path = "Model/Categories/MZCoreDataFlickrPhoto+Additional.m"; sourceTree = "<group>"; };
+		0631B035184A280200668FB8 /* MZCoreDataFlickrComment+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MZCoreDataFlickrComment+Additional.h"; path = "Model/Categories/MZCoreDataFlickrComment+Additional.h"; sourceTree = "<group>"; };
+		0631B036184A280200668FB8 /* MZCoreDataFlickrComment+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MZCoreDataFlickrComment+Additional.m"; path = "Model/Categories/MZCoreDataFlickrComment+Additional.m"; sourceTree = "<group>"; };
+		0631B038184A3C6700668FB8 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
+		0631B039184A3C6700668FB8 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		064BB764182FE9FC00D7EBD9 /* MZFlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZFlickrPhoto.h; path = Model/MZFlickrPhoto.h; sourceTree = "<group>"; };
+		064BB765182FE9FC00D7EBD9 /* MZFlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZFlickrPhoto.m; path = Model/MZFlickrPhoto.m; sourceTree = "<group>"; };
+		064BB768182FF0E100D7EBD9 /* MZLibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZLibraryAPI.h; path = Model/MZLibraryAPI.h; sourceTree = "<group>"; };
+		064BB769182FF0E100D7EBD9 /* MZLibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZLibraryAPI.m; path = Model/MZLibraryAPI.m; sourceTree = "<group>"; };
+		064BB76C183007D000D7EBD9 /* MZFlickrPhotoDimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZFlickrPhotoDimension.h; path = Model/MZFlickrPhotoDimension.h; sourceTree = "<group>"; };
+		064BB76D183007D000D7EBD9 /* MZFlickrPhotoDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZFlickrPhotoDimension.m; path = Model/MZFlickrPhotoDimension.m; sourceTree = "<group>"; };
+		064BB76F18300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		064BB77018300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		064BB773183013D900D7EBD9 /* MZRecentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRecentCell.h; sourceTree = "<group>"; };
+		064BB774183013D900D7EBD9 /* MZRecentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRecentCell.m; sourceTree = "<group>"; };
+		06709F8C1830332D001E2DAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		06709F9018303C9A001E2DAC /* MZRecentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRecentDetailsViewController.h; sourceTree = "<group>"; };
+		06709F9118303C9A001E2DAC /* MZRecentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRecentDetailsViewController.m; sourceTree = "<group>"; };
+		06ABD76618469BE700A33C1E /* MZRecentPhotoCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRecentPhotoCommentCell.h; sourceTree = "<group>"; };
+		06ABD76718469BE700A33C1E /* MZRecentPhotoCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRecentPhotoCommentCell.m; sourceTree = "<group>"; };
+		06B60380185105CA007FFAD3 /* MZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTabBarController.h; path = Controllers/MZTabBarController.h; sourceTree = "<group>"; };
+		06B60381185105CA007FFAD3 /* MZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTabBarController.m; path = Controllers/MZTabBarController.m; sourceTree = "<group>"; };
+		06B60386185106F4007FFAD3 /* MZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZConstants.h; path = Additional/MZConstants.h; sourceTree = "<group>"; };
+		06B60387185106F4007FFAD3 /* MZConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZConstants.m; path = Additional/MZConstants.m; sourceTree = "<group>"; };
+		06BE7FE21831085600449D57 /* MZFlickrComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZFlickrComment.h; path = Model/MZFlickrComment.h; sourceTree = "<group>"; };
+		06BE7FE31831085600449D57 /* MZFlickrComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZFlickrComment.m; path = Model/MZFlickrComment.m; sourceTree = "<group>"; };
+		5B453F70AA144A1EA93271D5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		FE594F9C6CE54FB9ADDBD407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +119,7 @@
 				0618DBA8182C4998002C487B /* CoreGraphics.framework in Frameworks */,
 				0618DBAA182C4998002C487B /* UIKit.framework in Frameworks */,
 				0618DBA6182C4998002C487B /* Foundation.framework in Frameworks */,
+				DD66C5F3068E4FB49F2BF7FB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +143,7 @@
 				0618DBCA182C4998002C487B /* FlickrManiaTests */,
 				0618DBA4182C4998002C487B /* Frameworks */,
 				0618DBA3182C4998002C487B /* Products */,
+				5B453F70AA144A1EA93271D5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +163,7 @@
 				0618DBA7182C4998002C487B /* CoreGraphics.framework */,
 				0618DBA9182C4998002C487B /* UIKit.framework */,
 				0618DBC4182C4998002C487B /* XCTest.framework */,
+				FE594F9C6CE54FB9ADDBD407 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,12 +171,14 @@
 		0618DBAB182C4998002C487B /* FlickrMania */ = {
 			isa = PBXGroup;
 			children = (
+				06B6037F1851021A007FFAD3 /* Controllers */,
+				064BB77618301EA300D7EBD9 /* Additional */,
+				064BB767182FEE4C00D7EBD9 /* Library */,
+				064BB763182FE83B00D7EBD9 /* Models */,
+				0618DBDA182C4CE5002C487B /* Core Data */,
 				0618DBB4182C4998002C487B /* MZAppDelegate.h */,
 				0618DBB5182C4998002C487B /* MZAppDelegate.m */,
 				0618DBB7182C4998002C487B /* Main.storyboard */,
-				0618DBBA182C4998002C487B /* MZViewController.h */,
-				0618DBBB182C4998002C487B /* MZViewController.m */,
-				0618DBBD182C4998002C487B /* Images.xcassets */,
 				0618DBAC182C4998002C487B /* Supporting Files */,
 			);
 			path = FlickrMania;
@@ -130,6 +191,7 @@
 				0618DBAE182C4998002C487B /* InfoPlist.strings */,
 				0618DBB1182C4998002C487B /* main.m */,
 				0618DBB3182C4998002C487B /* FlickrMania-Prefix.pch */,
+				06709F8C1830332D001E2DAC /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +214,102 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0618DBDA182C4CE5002C487B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0631B01B184A260F00668FB8 /* Models */,
+				0618DBDB182C4D00002C487B /* Flickrmania.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		0631B01B184A260F00668FB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0631B02E184A277C00668FB8 /* Categories */,
+				0631B02B184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.h */,
+				0631B02C184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m */,
+				0631B028184A26BA00668FB8 /* MZCoreDataFlickrPhoto.h */,
+				0631B029184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m */,
+				0631B025184A26BA00668FB8 /* MZCoreDataFlickrComment.h */,
+				0631B026184A26BA00668FB8 /* MZCoreDataFlickrComment.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0631B02E184A277C00668FB8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0631B02F184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.h */,
+				0631B030184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.m */,
+				0631B032184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.h */,
+				0631B033184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m */,
+				0631B035184A280200668FB8 /* MZCoreDataFlickrComment+Additional.h */,
+				0631B036184A280200668FB8 /* MZCoreDataFlickrComment+Additional.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		064BB763182FE83B00D7EBD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				064BB764182FE9FC00D7EBD9 /* MZFlickrPhoto.h */,
+				064BB765182FE9FC00D7EBD9 /* MZFlickrPhoto.m */,
+				064BB76C183007D000D7EBD9 /* MZFlickrPhotoDimension.h */,
+				064BB76D183007D000D7EBD9 /* MZFlickrPhotoDimension.m */,
+				06BE7FE21831085600449D57 /* MZFlickrComment.h */,
+				06BE7FE31831085600449D57 /* MZFlickrComment.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		064BB767182FEE4C00D7EBD9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				064BB768182FF0E100D7EBD9 /* MZLibraryAPI.h */,
+				064BB769182FF0E100D7EBD9 /* MZLibraryAPI.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		064BB77218300EAD00D7EBD9 /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				0618DBBA182C4998002C487B /* MZRecentViewController.h */,
+				0618DBBB182C4998002C487B /* MZRecentViewController.m */,
+				064BB773183013D900D7EBD9 /* MZRecentCell.h */,
+				064BB774183013D900D7EBD9 /* MZRecentCell.m */,
+				06709F9018303C9A001E2DAC /* MZRecentDetailsViewController.h */,
+				06709F9118303C9A001E2DAC /* MZRecentDetailsViewController.m */,
+				06ABD76618469BE700A33C1E /* MZRecentPhotoCommentCell.h */,
+				06ABD76718469BE700A33C1E /* MZRecentPhotoCommentCell.m */,
+			);
+			name = Recent;
+			sourceTree = "<group>";
+		};
+		064BB77618301EA300D7EBD9 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				064BB76F18300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.h */,
+				064BB77018300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m */,
+				0631B038184A3C6700668FB8 /* UIColor+Random.h */,
+				0631B039184A3C6700668FB8 /* UIColor+Random.m */,
+				06B60386185106F4007FFAD3 /* MZConstants.h */,
+				06B60387185106F4007FFAD3 /* MZConstants.m */,
+			);
+			name = Additional;
+			sourceTree = "<group>";
+		};
+		06B6037F1851021A007FFAD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				064BB77218300EAD00D7EBD9 /* Recent */,
+				06B60380185105CA007FFAD3 /* MZTabBarController.h */,
+				06B60381185105CA007FFAD3 /* MZTabBarController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0618DBD4182C4998002C487B /* Build configuration list for PBXNativeTarget "FlickrMania" */;
 			buildPhases = (
+				D42EDAE0FF224DD992BD3966 /* Check Pods Manifest.lock */,
 				0618DB9E182C4998002C487B /* Sources */,
 				0618DB9F182C4998002C487B /* Frameworks */,
 				0618DBA0182C4998002C487B /* Resources */,
+				23F381B64AA941098AC6E5B0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,7 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0618DBBE182C4998002C487B /* Images.xcassets in Resources */,
+				06709F8D1830332D001E2DAC /* Images.xcassets in Resources */,
 				0618DBB0182C4998002C487B /* InfoPlist.strings in Resources */,
 				0618DBB9182C4998002C487B /* Main.storyboard in Resources */,
 			);
@@ -245,14 +405,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23F381B64AA941098AC6E5B0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42EDAE0FF224DD992BD3966 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0618DB9E182C4998002C487B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0618DBBC182C4998002C487B /* MZViewController.m in Sources */,
+				0631B02A184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m in Sources */,
+				0618DBBC182C4998002C487B /* MZRecentViewController.m in Sources */,
+				0631B02D184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m in Sources */,
+				064BB76A182FF0E100D7EBD9 /* MZLibraryAPI.m in Sources */,
+				0631B031184A27BA00668FB8 /* MZCoreDataFlickrPhotoDimension+Additional.m in Sources */,
+				0618DBDD182C4D00002C487B /* Flickrmania.xcdatamodeld in Sources */,
 				0618DBB2182C4998002C487B /* main.m in Sources */,
+				0631B037184A280200668FB8 /* MZCoreDataFlickrComment+Additional.m in Sources */,
+				0631B027184A26BA00668FB8 /* MZCoreDataFlickrComment.m in Sources */,
+				06709F9218303C9A001E2DAC /* MZRecentDetailsViewController.m in Sources */,
 				0618DBB6182C4998002C487B /* MZAppDelegate.m in Sources */,
+				064BB766182FE9FC00D7EBD9 /* MZFlickrPhoto.m in Sources */,
+				064BB76E183007D000D7EBD9 /* MZFlickrPhotoDimension.m in Sources */,
+				0631B03A184A3C6700668FB8 /* UIColor+Random.m in Sources */,
+				06B60382185105CA007FFAD3 /* MZTabBarController.m in Sources */,
+				06BE7FE41831085600449D57 /* MZFlickrComment.m in Sources */,
+				0631B034184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m in Sources */,
+				06ABD76818469BE700A33C1E /* MZRecentPhotoCommentCell.m in Sources */,
+				064BB77118300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				06B60388185106F4007FFAD3 /* MZConstants.m in Sources */,
+				064BB775183013D900D7EBD9 /* MZRecentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +587,7 @@
 		};
 		0618DBD5182C4998002C487B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B453F70AA144A1EA93271D5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -389,6 +601,7 @@
 		};
 		0618DBD6182C4998002C487B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B453F70AA144A1EA93271D5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +674,7 @@
 				0618DBD6182C4998002C487B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0618DBD7182C4998002C487B /* Build configuration list for PBXNativeTarget "FlickrManiaTests" */ = {
 			isa = XCConfigurationList;
@@ -469,8 +683,23 @@
 				0618DBD9182C4998002C487B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0618DBDB182C4D00002C487B /* Flickrmania.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0618DBDC182C4D00002C487B /* Flickrmania.xcdatamodel */,
+			);
+			currentVersion = 0618DBDC182C4D00002C487B /* Flickrmania.xcdatamodel */;
+			name = Flickrmania.xcdatamodeld;
+			path = CoreData/Flickrmania.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0618DB9A182C4998002C487B /* Project object */;
 }

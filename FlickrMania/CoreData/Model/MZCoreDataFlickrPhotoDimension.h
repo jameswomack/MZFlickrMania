@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * width;
 @property (nonatomic, retain) NSNumber * height;
-@property (nonatomic, retain) NSNumber * imageURL;
+@property (nonatomic, retain) NSString * imageURL;
 @property (nonatomic, retain) MZCoreDataFlickrPhoto *photo;
 
 @end

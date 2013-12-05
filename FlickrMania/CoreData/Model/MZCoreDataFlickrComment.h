@@ -16,8 +16,10 @@
 @property (nonatomic, retain) NSString * iD;
 @property (nonatomic, retain) NSNumber * iconFarm;
 @property (nonatomic, retain) NSNumber * iconServer;
+@property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) NSString * authorName;
 @property (nonatomic, retain) NSString * authorID;
+@property (nonatomic, retain) NSString * permalink;
 @property (nonatomic, retain) NSString * authorRealName;
 @property (nonatomic, retain) NSDate * createdDate;
 @property (nonatomic, retain) MZCoreDataFlickrPhoto *photo;

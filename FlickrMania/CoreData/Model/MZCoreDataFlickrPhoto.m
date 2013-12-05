@@ -20,8 +20,6 @@
 @dynamic ownerName;
 @dynamic title;
 @dynamic uploadDate;
-@dynamic content;
-@dynamic permalink;
 @dynamic comments;
 @dynamic dimensions;
 
