@@ -38,6 +38,7 @@
 		06ABD76818469BE700A33C1E /* MZRecentPhotoCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABD76718469BE700A33C1E /* MZRecentPhotoCommentCell.m */; };
 		06B60382185105CA007FFAD3 /* MZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B60381185105CA007FFAD3 /* MZTabBarController.m */; };
 		06B60388185106F4007FFAD3 /* MZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B60387185106F4007FFAD3 /* MZConstants.m */; };
+		06B6038C185139C7007FFAD3 /* MZFavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B6038B185139C7007FFAD3 /* MZFavouritesViewController.m */; };
 		06BE7FE41831085600449D57 /* MZFlickrComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE7FE31831085600449D57 /* MZFlickrComment.m */; };
 		DD66C5F3068E4FB49F2BF7FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE594F9C6CE54FB9ADDBD407 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,8 @@
 		06B60381185105CA007FFAD3 /* MZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTabBarController.m; path = Controllers/MZTabBarController.m; sourceTree = "<group>"; };
 		06B60386185106F4007FFAD3 /* MZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZConstants.h; path = Additional/MZConstants.h; sourceTree = "<group>"; };
 		06B60387185106F4007FFAD3 /* MZConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZConstants.m; path = Additional/MZConstants.m; sourceTree = "<group>"; };
+		06B6038A185139C7007FFAD3 /* MZFavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZFavouritesViewController.h; path = Controllers/MZFavouritesViewController.h; sourceTree = "<group>"; };
+		06B6038B185139C7007FFAD3 /* MZFavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZFavouritesViewController.m; path = Controllers/MZFavouritesViewController.m; sourceTree = "<group>"; };
 		06BE7FE21831085600449D57 /* MZFlickrComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZFlickrComment.h; path = Model/MZFlickrComment.h; sourceTree = "<group>"; };
 		06BE7FE31831085600449D57 /* MZFlickrComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZFlickrComment.m; path = Model/MZFlickrComment.m; sourceTree = "<group>"; };
 		5B453F70AA144A1EA93271D5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -303,11 +306,21 @@
 		06B6037F1851021A007FFAD3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06B603891851399C007FFAD3 /* Favourites */,
 				064BB77218300EAD00D7EBD9 /* Recent */,
 				06B60380185105CA007FFAD3 /* MZTabBarController.h */,
 				06B60381185105CA007FFAD3 /* MZTabBarController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		06B603891851399C007FFAD3 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				06B6038A185139C7007FFAD3 /* MZFavouritesViewController.h */,
+				06B6038B185139C7007FFAD3 /* MZFavouritesViewController.m */,
+			);
+			name = Favourites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +471,7 @@
 				064BB76E183007D000D7EBD9 /* MZFlickrPhotoDimension.m in Sources */,
 				0631B03A184A3C6700668FB8 /* UIColor+Random.m in Sources */,
 				06B60382185105CA007FFAD3 /* MZTabBarController.m in Sources */,
+				06B6038C185139C7007FFAD3 /* MZFavouritesViewController.m in Sources */,
 				06BE7FE41831085600449D57 /* MZFlickrComment.m in Sources */,
 				0631B034184A27DB00668FB8 /* MZCoreDataFlickrPhoto+Additional.m in Sources */,
 				06ABD76818469BE700A33C1E /* MZRecentPhotoCommentCell.m in Sources */,

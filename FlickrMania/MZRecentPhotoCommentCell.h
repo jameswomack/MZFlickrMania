@@ -24,8 +24,7 @@
 //  THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-
-@class MZFlickrComment;
+#import "MZFlickrComment.h"
 
 @interface MZRecentPhotoCommentCell : UITableViewCell
 
@@ -33,6 +32,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
-- (void)setupCellWithFlickerPhotoComment:(MZFlickrComment *)comment;
+- (void)setupCellWithFlickerPhotoComment:(id <MZFlickrComment>)comment;
 
 @end

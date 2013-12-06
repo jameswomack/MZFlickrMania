@@ -28,6 +28,7 @@
 #define kMZDefaultAnimationDuration 0.3
 
 extern NSString *const MZAddToFavouritesNotification;
+extern NSString *const MZRemoveFromFavouritesNotification;
 
 // FlickrAPI
 extern NSString *const MZFlickrAPIKey;

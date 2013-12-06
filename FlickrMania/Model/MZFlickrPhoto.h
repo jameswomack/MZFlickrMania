@@ -50,6 +50,8 @@
 
 @property (nonatomic, strong) NSArray *comments;
 
++ (NSDateFormatter *)flickrPhotoDateFormatter;
+
 - (NSURL *)ownerThumbnailURL;
 - (NSString *)uploadDateFormattedString;
 

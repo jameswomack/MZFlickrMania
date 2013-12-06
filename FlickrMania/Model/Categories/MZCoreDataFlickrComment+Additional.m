@@ -49,4 +49,21 @@
     return comment;
 }
 
+- (NSURL *)authorThumbnailURL
+{
+    NSString *thumbnailURLString = @"http://www.flickr.com/images/buddyicon.gif";
+
+    if ([self.iconServer integerValue] > 0) {
+        thumbnailURLString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/buddyicons/%@.jpg",self.iconFarm,self.iconServer,self.authorID];
+    }
+
+    return [NSURL URLWithString:thumbnailURLString];
+}
+
+- (NSString *)createdDateFormattedString
+{
+    return [[MZFlickrComment flickrCommentDateFormatter] stringFromDate:self.createdDate];
+}
+
+
 @end

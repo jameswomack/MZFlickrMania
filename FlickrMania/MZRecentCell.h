@@ -25,6 +25,15 @@
 
 #import <UIKit/UIKit.h>
 #import "MZFlickrPhoto.h"
+#import "MZCoreDataFlickrPhoto+Additional.h"
+
+@class MZRecentCell;
+
+@protocol MZRecentCellDelegate <NSObject>
+
+- (void)recentCellDidPerformDeleteAction:(MZRecentCell *)recentCell;
+
+@end
 
 @interface MZRecentCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIView *imageViewBackgroundView;
@@ -32,6 +41,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *backgroundPhotoView;
 
+@property (nonatomic, weak) id <MZRecentCellDelegate> delegate;
+
 - (void)setupCellWithFlickerPhoto:(MZFlickrPhoto *)photo;
+- (void)setupCellWithCoreDataFlickerPhoto:(MZCoreDataFlickrPhoto *)photo;
+
+- (void)deleteAction:(id)sender;
 
 @end

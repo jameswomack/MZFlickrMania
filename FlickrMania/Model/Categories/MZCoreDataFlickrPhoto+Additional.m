@@ -41,6 +41,25 @@
     }
 }
 
+- (void)updateComments:(NSArray *)comments saveInDefaultContext:(BOOL)save
+{
+    for (MZCoreDataFlickrComment *comment in self.comments) {
+        [comment MR_deleteEntity];
+    }
+
+    if (comments.count > 0) {
+        [comments enumerateObjectsUsingBlock:^(MZFlickrComment *obj, NSUInteger idx, BOOL *stop) {
+            MZCoreDataFlickrComment *comment = [MZCoreDataFlickrComment commentWithFlickrComment:obj saveInDefaultContext:NO];
+            comment.photo = self;
+        }];
+    }
+
+    if (save) {
+        NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+        [context MR_saveOnlySelfAndWait];
+    }
+}
+
 - (void)insertAttributesFromFlickPhoto:(MZFlickrPhoto *)flickrPhoto
 {
     self.iconFarm = flickrPhoto.iconFarm;
@@ -87,6 +106,58 @@
     }
 
     return photo;
+}
+
+- (NSArray *)sortedDimensionsByWidth
+{
+    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"height" ascending:YES]];
+
+    NSMutableArray *mutableDimensions = [[self.dimensions allObjects] mutableCopy];
+    NSMutableArray *objectForDelete = [NSMutableArray array];
+
+    for (MZCoreDataFlickrPhotoDimension *dimension in mutableDimensions) {
+        if ([dimension.width integerValue] <= 0 || [dimension.height integerValue] <= 0) {
+            [objectForDelete addObject:dimension];
+        }
+    }
+
+    [mutableDimensions removeObjectsInArray:objectForDelete];
+
+    NSArray *sortedDimensions = [mutableDimensions sortedArrayUsingDescriptors:sortDescriptors];
+
+    return sortedDimensions;
+}
+
+- (MZCoreDataFlickrPhotoDimension *)smallestDimension
+{
+    return [[self sortedDimensionsByWidth] firstObject];
+}
+
+- (NSURL *)mediumImageURL
+{
+    NSArray *dimensions = [self sortedDimensionsByWidth];
+    if (dimensions.count > 2) {
+        MZCoreDataFlickrPhotoDimension *dimension = dimensions[1];
+        return [NSURL URLWithString:dimension.imageURL];
+    } else {
+        MZCoreDataFlickrPhotoDimension *dimension = [dimensions firstObject];
+        return [NSURL URLWithString:dimension.imageURL];
+    }
+}
+
+- (NSURL *)ownerThumbnailURL
+{
+    NSString *thumbnailURLString = @"http://www.flickr.com/images/buddyicon.gif";
+
+    if ([self.iconServer integerValue] > 0) {
+        thumbnailURLString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/buddyicons/%@.jpg",self.iconFarm,self.iconServer,self.ownerID];
+    }
+    return [NSURL URLWithString:thumbnailURLString];
+}
+
+- (NSString *)uploadDateFormattedString
+{
+    return [[MZFlickrPhoto flickrPhotoDateFormatter] stringFromDate:self.uploadDate];
 }
 
 @end

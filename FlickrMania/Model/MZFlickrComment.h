@@ -25,7 +25,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MZFlickrComment : NSObject
+@protocol MZFlickrComment <NSObject>
+
+@property (nonatomic, strong) NSNumber *iconServer;
+@property (nonatomic, strong) NSNumber *iconFarm;
+
+@property (nonatomic, strong) NSString *authorName;
+@property (nonatomic, strong) NSString *content;
+
+- (NSURL *)authorThumbnailURL;
+- (NSString *)createdDateFormattedString;
+@end
+
+@interface MZFlickrComment : NSObject <MZFlickrComment>
 @property (nonatomic, strong) NSString *ID;
 
 @property (nonatomic, strong) NSString *authorID;
@@ -38,6 +50,8 @@
 @property (nonatomic, strong) NSDate *createdDate;
 @property (nonatomic, strong) NSURL *permalink;
 @property (nonatomic, strong) NSString *content;
+
++ (NSDateFormatter *)flickrCommentDateFormatter;
 
 - (NSURL *)authorThumbnailURL;
 - (NSString *)createdDateFormattedString;

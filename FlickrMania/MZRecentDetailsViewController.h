@@ -26,6 +26,7 @@
 #import <UIKit/UIKit.h>
 #import "MZRecentViewController.h"
 #import "MZFlickrPhoto.h"
+#import "MZCoreDataFlickrPhoto+Additional.h"
 
 @interface MZRecentDetailsViewController : UITableViewController
 
@@ -35,5 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoOwnerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *photoDateLabel;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bookmarkButton;
 @property (nonatomic, strong) MZFlickrPhoto *photo;
+@property (nonatomic, strong) MZCoreDataFlickrPhoto *photoFromDatabase;
 @end

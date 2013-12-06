@@ -26,7 +26,7 @@
 #import "MZCoreDataFlickrComment.h"
 #import "MZFlickrComment.h"
 
-@interface MZCoreDataFlickrComment (Additional)
+@interface MZCoreDataFlickrComment (Additional) <MZFlickrComment>
 
 + (MZCoreDataFlickrComment *)commentWithFlickrComment:(MZFlickrComment *)flickrComment saveInDefaultContext:(BOOL)save;
 

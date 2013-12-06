@@ -51,12 +51,12 @@
     return self;
 }
 
-- (void)commentsForPhoto:(MZFlickrPhoto *)photo
+- (void)commentsForPhotoID:(NSString *)photoID
        completionHandler:(MZLibraryAPICommentsForPhotoCompletionHandler)completionHandler
 {
-    NSParameterAssert(photo);
+    NSParameterAssert(photoID);
 
-    NSDictionary *parameters = @{@"photo_id" : photo.ID,
+    NSDictionary *parameters = @{@"photo_id" : photoID,
 
                                  @"format" : @"json",
                                  @"nojsoncallback" : @(1),

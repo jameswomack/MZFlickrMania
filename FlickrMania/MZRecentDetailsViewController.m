@@ -31,7 +31,7 @@
 NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
 
 @interface MZRecentDetailsViewController ()
-
+@property (nonatomic, strong) NSArray *comments;
 @end
 
 @implementation MZRecentDetailsViewController
@@ -45,13 +45,44 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
     }
 }
 
+- (void)setPhotoFromDatabase:(MZCoreDataFlickrPhoto *)photoFromDatabase
+{
+    if (_photoFromDatabase != photoFromDatabase) {
+        _photoFromDatabase = photoFromDatabase;
+
+        _comments = [_photoFromDatabase.comments allObjects];
+
+        if (_comments.count <= 0) {
+            [[MZLibraryAPI sharedLibrary] commentsForPhotoID:_photoFromDatabase.iD completionHandler:^(NSArray *comments, NSError *error) {
+                if (error) {
+                    [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                } else {
+                    _comments = comments;
+                    [_photoFromDatabase updateComments:comments saveInDefaultContext:YES];
+                    [self.tableView reloadData];
+                }
+            }];
+        }
+
+        [self reloadOutlets];
+    }
+}
+
 - (void)reloadOutlets
 {
-    self.photoTitleLabel.text = _photo.title;
-    [self.photoImageView setImageWithURL:_photo.mediumImageURL];
-    self.photoOwnerNameLabel.text = _photo.ownerName;
-    [self.photoOwnerImageView setImageWithURL:_photo.ownerThumbnailURL];
-    self.photoDateLabel.text = _photo.uploadDateFormattedString;
+    if (_photo) {
+        self.photoTitleLabel.text = _photo.title;
+        [self.photoImageView setImageWithURL:_photo.mediumImageURL];
+        self.photoOwnerNameLabel.text = _photo.ownerName;
+        [self.photoOwnerImageView setImageWithURL:_photo.ownerThumbnailURL];
+        self.photoDateLabel.text = _photo.uploadDateFormattedString;
+    } else {
+        self.photoTitleLabel.text = _photoFromDatabase.title;
+        [self.photoImageView setImageWithURL:_photoFromDatabase.mediumImageURL];
+        self.photoOwnerNameLabel.text = _photoFromDatabase.ownerName;
+        [self.photoOwnerImageView setImageWithURL:_photoFromDatabase.ownerThumbnailURL];
+        self.photoDateLabel.text = _photoFromDatabase.uploadDateFormattedString;
+    }
 }
 
 - (void)reloadData
@@ -59,7 +90,7 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
     [self reloadOutlets];
 
     if (_photo.comments.count <= 0) {
-        [[MZLibraryAPI sharedLibrary] commentsForPhoto:_photo completionHandler:^(NSArray *comments, NSError *error) {
+        [[MZLibraryAPI sharedLibrary] commentsForPhotoID:_photo.ID completionHandler:^(NSArray *comments, NSError *error) {
             if (error) {
                 [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             } else {
@@ -76,6 +107,10 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
 
     [self reloadOutlets];
     [self.tableView reloadData];
+
+    if (self.photoFromDatabase) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (IBAction)bookmarkButtonTapped:(id)sender
@@ -96,7 +131,14 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
 {
     MZRecentPhotoCommentCell *cell = (MZRecentPhotoCommentCell *)[tableView dequeueReusableCellWithIdentifier:MZRecentPhotoCommentCellIdentifier];
 
-    MZFlickrComment *comment = self.photo.comments[indexPath.row];
+    id <MZFlickrComment> comment = nil;
+
+    if (self.photo) {
+        comment = self.photo.comments[indexPath.row];
+    } else if (self.photoFromDatabase) {
+        comment = self.comments[indexPath.row];
+    }
+
     cell.commentLabel.text = comment.content;
 
     [cell.contentView setNeedsLayout];
@@ -109,7 +151,11 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.photo.comments.count;
+    if (self.photo) {
+        return self.photo.comments.count;
+    } else {
+        return self.comments.count;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,7 +167,14 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
 {
     MZRecentPhotoCommentCell *cell = (MZRecentPhotoCommentCell *)[tableView dequeueReusableCellWithIdentifier:MZRecentPhotoCommentCellIdentifier forIndexPath:indexPath];
 
-    MZFlickrComment *comment = self.photo.comments[indexPath.row];
+    id <MZFlickrComment> comment = nil;
+
+    if (self.photo) {
+        comment = self.photo.comments[indexPath.row];
+    } else if (self.photoFromDatabase) {
+        comment = self.comments[indexPath.row];
+    }
+    
     [cell setupCellWithFlickerPhotoComment:comment];
 
 

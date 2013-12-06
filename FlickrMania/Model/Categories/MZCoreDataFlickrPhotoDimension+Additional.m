@@ -32,6 +32,7 @@
     NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 
     MZCoreDataFlickrPhotoDimension * dimension = [MZCoreDataFlickrPhotoDimension MR_createEntity];
+
     dimension.imageURL = [imageURL absoluteString];
     dimension.width = width;
     dimension.height = height;
@@ -42,5 +43,6 @@
 
     return dimension;
 }
+
 
 @end

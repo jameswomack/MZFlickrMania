@@ -26,6 +26,7 @@
 #import "MZConstants.h"
 
 NSString *const MZAddToFavouritesNotification = @"MZAddToFavouritesNotification";
+NSString *const MZRemoveFromFavouritesNotification = @"MZRemoveFromFavouritesNotification";
 
 NSString *const MZFlickrAPIKey = @"f2083de79936a35cd8ab084246e6485b";
 NSString *const MZFlickrBaseURL = @"http://api.flickr.com";

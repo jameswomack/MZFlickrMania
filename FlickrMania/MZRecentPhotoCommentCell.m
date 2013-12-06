@@ -37,7 +37,7 @@
     return self;
 }
 
-- (void)setupCellWithFlickerPhotoComment:(MZFlickrComment *)comment
+- (void)setupCellWithFlickerPhotoComment:(id <MZFlickrComment>)comment
 {
     self.commentLabel.text = [NSString stringWithFormat:@"%@ %@",comment.authorName,comment.content];
     [self.authorImageView setImageWithURL:comment.authorThumbnailURL];

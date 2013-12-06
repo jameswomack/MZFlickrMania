@@ -26,6 +26,7 @@
 #import "MZRecentCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "UIColor+Random.h"
+#import "MZCoreDataFlickrPhotoDimension+Additional.h"
 
 @interface AFImageCache
 - (UIImage *)cachedImageForRequest:(NSURLRequest *)request;
@@ -37,11 +38,9 @@
 
 @implementation MZRecentCell
 
-- (void)setupCellWithFlickerPhoto:(MZFlickrPhoto *)photo
+- (void)loadImageFromURL:(NSURL *)url
 {
-
-
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:photo.smallImageURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
 
     UIImage *cachedImage = [[UIImageView af_sharedImageCache] cachedImageForRequest:request];
@@ -59,16 +58,39 @@
                     self.imageView.alpha = 1.0;
                 }];
             }
-            
+
         } failure:nil];
     }
-    
+}
+
+- (void)setupCellWithCoreDataFlickerPhoto:(MZCoreDataFlickrPhoto *)photo
+{
+    [self loadImageFromURL:[NSURL URLWithString:photo.smallestDimension.imageURL]];
+
     self.titleLabel.text = photo.title;
 
     if ([photo.title isEqualToString:@""] || !photo.title) {
         [(NSLayoutConstraint *)self.titleLabel.constraints[0] setConstant:0];
     }
 
+    [self setupCell];
+}
+
+- (void)setupCellWithFlickerPhoto:(MZFlickrPhoto *)photo
+{
+    [self loadImageFromURL:photo.smallImageURL];
+    
+    self.titleLabel.text = photo.title;
+
+    if ([photo.title isEqualToString:@""] || !photo.title) {
+        [(NSLayoutConstraint *)self.titleLabel.constraints[0] setConstant:0];
+    }
+    
+    [self setupCell];
+}
+
+- (void)setupCell
+{
     self.backgroundPhotoView.backgroundColor = [UIColor whiteColor];
 
     self.backgroundPhotoView.layer.cornerRadius = 6;
@@ -83,5 +105,26 @@
     [self.layer setShadowOpacity:0.2];
     [self.layer setShadowPath:[[UIBezierPath bezierPathWithRect:self.layer.bounds] CGPath]];
 }
+
+- (void)deleteAction:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(recentCellDidPerformDeleteAction:)]) {
+        [self.delegate recentCellDidPerformDeleteAction:self];
+    }
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (action == @selector(deleteAction:)) {
+        return YES;
+    }
+    return NO;
+}
+
 
 @end

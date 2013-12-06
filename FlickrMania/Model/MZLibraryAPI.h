@@ -39,7 +39,7 @@ typedef void(^MZLibraryAPIAddPhotoCompletionBlock)(MZCoreDataFlickrPhoto *photo,
 + (MZLibraryAPI *)sharedLibrary;
 
 
-- (void)commentsForPhoto:(MZFlickrPhoto *)photo
+- (void)commentsForPhotoID:(NSString *)photoID
        completionHandler:(MZLibraryAPICommentsForPhotoCompletionHandler)completionHandler;
 
 - (void)recentPhotosOnPage:(NSInteger)page

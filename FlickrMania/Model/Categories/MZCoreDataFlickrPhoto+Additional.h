@@ -26,11 +26,22 @@
 #import "MZCoreDataFlickrPhoto.h"
 
 @class MZFlickrPhoto;
+@class MZCoreDataFlickrPhotoDimension;
 
 @interface MZCoreDataFlickrPhoto (Additional)
 
 - (void)updateWithFlickrPhoto:(MZFlickrPhoto *)flickrPhoto saveInDefaultContext:(BOOL)save;
 
 + (MZCoreDataFlickrPhoto *)photoWithFlickrPhoto:(MZFlickrPhoto *)flickrPhoto saveInDefaultContext:(BOOL)save;
+
+- (void)updateComments:(NSArray *)comments saveInDefaultContext:(BOOL)save;
+
+- (NSArray *)sortedDimensionsByWidth;
+- (MZCoreDataFlickrPhotoDimension *)smallestDimension;
+
+- (NSURL *)ownerThumbnailURL;
+- (NSString *)uploadDateFormattedString;
+
+@property (nonatomic, readonly) NSURL *mediumImageURL;
 
 @end

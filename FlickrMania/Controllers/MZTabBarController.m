@@ -41,19 +41,40 @@
         [self favouritesTabBarItem].badgeValue = [NSString stringWithFormat:@"%d",countOfPhotos];
     }
 
+    __weak MZTabBarController *weakSelf = self;
 
     [[NSNotificationCenter defaultCenter] addObserverForName:MZAddToFavouritesNotification object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
 
-                                                      if (![self favouritesTabBarItem].badgeValue || [[self favouritesTabBarItem].badgeValue isEqualToString:@""]) {
-                                                          [self favouritesTabBarItem].badgeValue = @"1";
+                                                      if (![weakSelf favouritesTabBarItem].badgeValue || [[weakSelf favouritesTabBarItem].badgeValue isEqualToString:@""]) {
+                                                          [weakSelf favouritesTabBarItem].badgeValue = @"1";
                                                       } else {
-                                                          NSInteger badge = [[self favouritesTabBarItem].badgeValue integerValue];
+                                                          NSInteger badge = [[weakSelf favouritesTabBarItem].badgeValue integerValue];
                                                           badge++;
-                                                          [self favouritesTabBarItem].badgeValue = [NSString stringWithFormat:@"%d",badge];
+                                                          [weakSelf favouritesTabBarItem].badgeValue = [NSString stringWithFormat:@"%d",badge];
                                                       }
     }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:MZRemoveFromFavouritesNotification object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+
+                                                      if (![weakSelf favouritesTabBarItem].badgeValue || [[self favouritesTabBarItem].badgeValue isEqualToString:@""]) {
+                                                          [weakSelf favouritesTabBarItem].badgeValue = @"";
+                                                      } else {
+                                                          NSInteger badge = [[self favouritesTabBarItem].badgeValue integerValue];
+                                                          badge--;
+                                                          if (badge <= 0) {
+                                                              [weakSelf favouritesTabBarItem].badgeValue = nil;
+                                                          } else {
+                                                              [weakSelf favouritesTabBarItem].badgeValue = [NSString stringWithFormat:@"%d",badge];
+                                                          }
+
+                                                      }
+                                                  }];
+
+
 }
 
 - (UITabBarItem *)favouritesTabBarItem
