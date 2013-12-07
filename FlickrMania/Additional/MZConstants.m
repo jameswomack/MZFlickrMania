@@ -27,8 +27,9 @@
 
 NSString *const MZAddToFavouritesNotification = @"MZAddToFavouritesNotification";
 NSString *const MZRemoveFromFavouritesNotification = @"MZRemoveFromFavouritesNotification";
+NSString *const MZRemoveAllFromFavouritesUserInfoKey = @"MZRemoveAllFromFavouritesUserInfoKey";
 
-NSString *const MZFlickrAPIKey = @"f2083de79936a35cd8ab084246e6485b";
+NSString *const MZFlickrAPIKey = @"";
 NSString *const MZFlickrBaseURL = @"http://api.flickr.com";
 NSString *const MZFlickrPath = @"/services/rest/";
 

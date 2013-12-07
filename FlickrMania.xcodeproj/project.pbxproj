@@ -33,6 +33,7 @@
 		064BB76E183007D000D7EBD9 /* MZFlickrPhotoDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB76D183007D000D7EBD9 /* MZFlickrPhotoDimension.m */; };
 		064BB77118300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB77018300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m */; };
 		064BB775183013D900D7EBD9 /* MZRecentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064BB774183013D900D7EBD9 /* MZRecentCell.m */; };
+		06532C6C18538D01004A2837 /* MZMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06532C6B18538D01004A2837 /* MZMoreViewController.m */; };
 		06709F8D1830332D001E2DAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06709F8C1830332D001E2DAC /* Images.xcassets */; };
 		06709F9218303C9A001E2DAC /* MZRecentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06709F9118303C9A001E2DAC /* MZRecentDetailsViewController.m */; };
 		06ABD76818469BE700A33C1E /* MZRecentPhotoCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABD76718469BE700A33C1E /* MZRecentPhotoCommentCell.m */; };
@@ -97,6 +98,8 @@
 		064BB77018300D2B00D7EBD9 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		064BB773183013D900D7EBD9 /* MZRecentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRecentCell.h; sourceTree = "<group>"; };
 		064BB774183013D900D7EBD9 /* MZRecentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRecentCell.m; sourceTree = "<group>"; };
+		06532C6A18538D01004A2837 /* MZMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZMoreViewController.h; path = Controllers/MZMoreViewController.h; sourceTree = "<group>"; };
+		06532C6B18538D01004A2837 /* MZMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZMoreViewController.m; path = Controllers/MZMoreViewController.m; sourceTree = "<group>"; };
 		06709F8C1830332D001E2DAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		06709F9018303C9A001E2DAC /* MZRecentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRecentDetailsViewController.h; sourceTree = "<group>"; };
 		06709F9118303C9A001E2DAC /* MZRecentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRecentDetailsViewController.m; sourceTree = "<group>"; };
@@ -303,9 +306,19 @@
 			name = Additional;
 			sourceTree = "<group>";
 		};
+		06532C6918538CE6004A2837 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				06532C6A18538D01004A2837 /* MZMoreViewController.h */,
+				06532C6B18538D01004A2837 /* MZMoreViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		06B6037F1851021A007FFAD3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06532C6918538CE6004A2837 /* More */,
 				06B603891851399C007FFAD3 /* Favourites */,
 				064BB77218300EAD00D7EBD9 /* Recent */,
 				06B60380185105CA007FFAD3 /* MZTabBarController.h */,
@@ -457,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0631B02A184A26BA00668FB8 /* MZCoreDataFlickrPhoto.m in Sources */,
+				06532C6C18538D01004A2837 /* MZMoreViewController.m in Sources */,
 				0618DBBC182C4998002C487B /* MZRecentViewController.m in Sources */,
 				0631B02D184A26BA00668FB8 /* MZCoreDataFlickrPhotoDimension.m in Sources */,
 				064BB76A182FF0E100D7EBD9 /* MZLibraryAPI.m in Sources */,

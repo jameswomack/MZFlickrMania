@@ -76,12 +76,15 @@ NSString *const MZRecentPhotoCommentCellIdentifier = @"CommentCell";
         self.photoOwnerNameLabel.text = _photo.ownerName;
         [self.photoOwnerImageView setImageWithURL:_photo.ownerThumbnailURL];
         self.photoDateLabel.text = _photo.uploadDateFormattedString;
+        self.tableView.tableHeaderView.frame =(CGRect){ .origin = self.tableView.tableHeaderView.frame.origin, .size = CGSizeMake(self.tableView.tableHeaderView.frame.size.width, _photo.mediumImageDimensions.height - self.authorBackgroundView.frame.size.height)  };
     } else {
         self.photoTitleLabel.text = _photoFromDatabase.title;
         [self.photoImageView setImageWithURL:_photoFromDatabase.mediumImageURL];
         self.photoOwnerNameLabel.text = _photoFromDatabase.ownerName;
         [self.photoOwnerImageView setImageWithURL:_photoFromDatabase.ownerThumbnailURL];
         self.photoDateLabel.text = _photoFromDatabase.uploadDateFormattedString;
+
+        self.tableView.tableHeaderView.frame =(CGRect){ .origin = self.tableView.tableHeaderView.frame.origin, .size = CGSizeMake(self.tableView.tableHeaderView.frame.size.width, [_photoFromDatabase.mediumDimension.height floatValue] - self.authorBackgroundView.frame.size.height)  };
     }
 }
 

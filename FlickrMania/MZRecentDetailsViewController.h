@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *photoOwnerNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoOwnerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *photoDateLabel;
+@property (weak, nonatomic) IBOutlet UIView *authorBackgroundView;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bookmarkButton;
 @property (nonatomic, strong) MZFlickrPhoto *photo;

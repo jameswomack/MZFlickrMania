@@ -38,6 +38,7 @@
 
 - (NSArray *)sortedDimensionsByWidth;
 - (MZCoreDataFlickrPhotoDimension *)smallestDimension;
+- (MZCoreDataFlickrPhotoDimension *)mediumDimension;
 
 - (NSURL *)ownerThumbnailURL;
 - (NSString *)uploadDateFormattedString;

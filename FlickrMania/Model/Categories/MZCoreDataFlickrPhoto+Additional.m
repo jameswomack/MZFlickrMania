@@ -133,16 +133,21 @@
     return [[self sortedDimensionsByWidth] firstObject];
 }
 
-- (NSURL *)mediumImageURL
+- (MZCoreDataFlickrPhotoDimension *)mediumDimension
 {
     NSArray *dimensions = [self sortedDimensionsByWidth];
     if (dimensions.count > 2) {
         MZCoreDataFlickrPhotoDimension *dimension = dimensions[1];
-        return [NSURL URLWithString:dimension.imageURL];
+        return dimension;
     } else {
-        MZCoreDataFlickrPhotoDimension *dimension = [dimensions firstObject];
-        return [NSURL URLWithString:dimension.imageURL];
+        MZCoreDataFlickrPhotoDimension *dimension = [dimensions lastObject];
+        return dimension;
     }
+}
+
+- (NSURL *)mediumImageURL
+{
+    return [NSURL URLWithString:[self mediumDimension].imageURL];
 }
 
 - (NSURL *)ownerThumbnailURL

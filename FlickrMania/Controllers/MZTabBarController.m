@@ -60,8 +60,11 @@
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
 
-                                                      if (![weakSelf favouritesTabBarItem].badgeValue || [[self favouritesTabBarItem].badgeValue isEqualToString:@""]) {
-                                                          [weakSelf favouritesTabBarItem].badgeValue = @"";
+                                                      if (![weakSelf favouritesTabBarItem].badgeValue ||
+                                                          [[self favouritesTabBarItem].badgeValue isEqualToString:@""] ||
+                                                          [note.userInfo[MZRemoveAllFromFavouritesUserInfoKey] boolValue]) {
+                                                          
+                                                          [weakSelf favouritesTabBarItem].badgeValue = nil;
                                                       } else {
                                                           NSInteger badge = [[self favouritesTabBarItem].badgeValue integerValue];
                                                           badge--;
