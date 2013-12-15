@@ -134,6 +134,11 @@
 
 }
 
+- (NSFetchedResultsController *)fetchPhotosFromDatabaseWithDelegate:(id<NSFetchedResultsControllerDelegate>)delegate
+{
+    return [MZCoreDataFlickrPhoto MR_fetchAllSortedBy:@"uploadDate" ascending:YES withPredicate:nil groupBy:nil delegate:delegate];
+}
+
 #pragma mark - Rest Kit Configuration
 
 - (void)configureRestKitObjectManager

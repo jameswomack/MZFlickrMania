@@ -40,7 +40,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *backgroundPhotoView;
-
 @property (nonatomic, weak) id <MZRecentCellDelegate> delegate;
 
 - (void)setupCellWithFlickerPhoto:(MZFlickrPhoto *)photo;

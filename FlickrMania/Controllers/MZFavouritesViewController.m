@@ -207,7 +207,7 @@ shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath
 - (NSFetchedResultsController *)fetchedResultsController {
     // Set up the fetched results controller if needed.
     if (_fetchedResultsController == nil) {
-        self.fetchedResultsController = [MZCoreDataFlickrPhoto MR_fetchAllSortedBy:@"uploadDate" ascending:YES withPredicate:nil groupBy:nil delegate:self];
+        self.fetchedResultsController = [[MZLibraryAPI sharedLibrary] fetchPhotosFromDatabaseWithDelegate:self];
     }
 
 	return _fetchedResultsController;

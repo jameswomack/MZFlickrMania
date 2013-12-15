@@ -47,5 +47,6 @@ typedef void(^MZLibraryAPIAddPhotoCompletionBlock)(MZCoreDataFlickrPhoto *photo,
 
 
 - (void)addPhotoToDatabase:(MZFlickrPhoto *)photo completionBlock:(MZLibraryAPIAddPhotoCompletionBlock)completionBlock;
+- (NSFetchedResultsController *)fetchPhotosFromDatabaseWithDelegate:(id<NSFetchedResultsControllerDelegate>)delegate;
 
 @end
