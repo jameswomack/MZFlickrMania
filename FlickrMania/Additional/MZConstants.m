@@ -31,6 +31,6 @@ NSString *const MZRemoveAllFromFavouritesUserInfoKey = @"MZRemoveAllFromFavourit
 
 #warning You must insert your API Key from Flickr
 NSString *const MZFlickrAPIKey = @"";
-NSString *const MZFlickrBaseURL = @"http://api.flickr.com";
+NSString *const MZFlickrBaseURL = @"https://api.flickr.com";
 NSString *const MZFlickrPath = @"/services/rest/";
 
